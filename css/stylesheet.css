@@ -200,19 +200,18 @@ box-shadow: inset 0 0 0 2px #D8C38E, inset 0 0 0 3px #4E0A0A, inset 0 0 0 4px #D
 
 .card{
 	border: 4px solid #E01A1A;
-	/*-webkit-transform: skewY(5deg);*/
-	width: 200px;
-	height: 164px;
+	-webkit-transform: skewY(5deg);
+	width: 400px;
+	height: 300px;
 	margin: 400px auto;
 	padding: 75px 15px;
 	background-color: #023302;
-	box-shadow : 0 0 0 5px rgba(27, 27, 29, 0.05),
-				     0 0 0 10px rgba(27, 27, 29, 0.05),
-				     0 0 0 15px rgba(27, 27, 29, 0.05),
-				     0 0 0 20px rgba(27, 27, 29, 0.05);
 }
 
-.tree{	
+.tree{
+	-webkit-transform: scale(1.5);
+	margin-top: 85px;
+	cursor: default;
 	cursor: default;
 }
 
@@ -240,7 +239,7 @@ box-shadow: inset 0 0 0 2px #D8C38E, inset 0 0 0 3px #4E0A0A, inset 0 0 0 4px #D
 
 .tree ul li#starred:before{
 	color: #FFE13F;
-	content: '.';			
+	content: '★';			
 	margin-left: -10px;
 }
 
