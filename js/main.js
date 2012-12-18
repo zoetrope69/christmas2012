@@ -28,40 +28,15 @@ $(document).ready(function() {
        
         }
 
-        //
-      
-        $('#input_buttons>li:nth-child(1)').click(function(){            
-            $('#input_buttons>li').removeClass('selected');
-            $('#input_buttons>li:nth-child(1)').addClass('selected');
-            button = 0;
-        });
-        $('#input_buttons>li:nth-child(2)').click(function(){            
-            $('#input_buttons>li').removeClass('selected');
-            $('#input_buttons>li:nth-child(2)').addClass('selected');
-            button = 1;
-        });
-        $('#input_buttons>li:nth-child(3)').click(function(){            
-            $('#input_buttons>li').removeClass('selected');
-            $('#input_buttons>li:nth-child(3)').addClass('selected');
-            button = 2;
+        var likeness = 0;
 
-        });
-        $('#input_buttons>li:nth-child(4)').click(function(){            
-            $('#input_buttons>li').removeClass('selected');
-            $('#input_buttons>li:nth-child(4)').addClass('selected');
-            button = 3;
+        $('#input_buttons>li').click(function(){
 
-        });
-        $('#input_buttons>li:nth-child(5)').click(function(){            
             $('#input_buttons>li').removeClass('selected');
-            $('#input_buttons>li:nth-child(5)').addClass('selected');
-            button = 4;
+            likeness = $(this).html();
+            var number = Number(likeness) + 1;
+            $('#input_buttons>li:nth-child('+number+')').addClass('selected');
 
-        });
-        $('#input_buttons>li:nth-child(6)').click(function(){            
-            $('#input_buttons>li').removeClass('selected');            
-            $('#input_buttons>li:nth-child(6)').addClass('selected');
-            button = 5;
         });
 
         $('#go').click(function(){
@@ -71,9 +46,9 @@ $(document).ready(function() {
             console.log(out);
             }
             //Grab them vals
-            name = $('#input_name').val();
+            name = $('#input_name').val();          
 
-            alert(name+button);
+            alert('Your name is: '+name+'. Zac likes you: '+likeness+' out of 5.');
             //Stop the button from doing 
             return false;
         });
