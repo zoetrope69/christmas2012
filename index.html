@@ -6,43 +6,8 @@
         <link rel="stylesheet" href="css/stylesheet.css" type="text/css">
         <!-- Lego CDN styley probs should have this scriz @ the bottom but fok fok being polite -->
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-        <script>
-        $(document).ready(function() {
-                function genSnow() {
- 
-                        var buffer = "";
-                        var rand = 0;
- 
-                        //Gen that snow anti-blanco
-                        var snowflakes = [".", ".", ".",".",
-                                          ".", ".", ".", ".",
-                                          ".", ".", "•","•","•",
-                                          "•", "•", "•", "■"];
-                        for(var i=10;i>0;i--){
-                                buffer += "<li>";
-                                for(var b=82;b>0;b--){
-                                        rand = Math.floor((Math.random()* snowflakes.length));                                
-                                        buffer += snowflakes[rand];
-                                }
-                                buffer += "</li>";
-                        }
-                       
-                       
-                        //Lets just slap them there into the page now.
-                       
-                        $('#snowflake').html(buffer).text();
- 
-                        //MAKE RANDOM FUN TIME                    
-                        setTimeout(function(){genSnow()}, 250);
-               
-                }
- 
-                genSnow();
- 
-               
- 
-         });
-        </script>
+        <script src="js/main.js"></script>
+       
 </head>
 <body>
 	
