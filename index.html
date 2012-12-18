@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="UTF-8">
+        <title>Christmas Card</title>
+        <link rel="stylesheet" href="css/stylesheet.css" type="text/css">
+        <!-- Lego CDN styley probs should have this scriz @ the bottom but fok fok being polite -->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+        <script>
+        $(document).ready(function() {
+                function genSnow() {
+ 
+                        var buffer = "";
+                        var rand = 0;
+ 
+                        //Gen that snow anti-blanco
+                        var snowflakes = [".", ".", ".",".",
+                                          ".", ".", ".", ".",
+                                          ".", ".", "•","•","•",
+                                          "•", "•", "•", "■"];
+                        for(var i=10;i>0;i--){
+                                buffer += "<li>";
+                                for(var b=82;b>0;b--){
+                                        rand = Math.floor((Math.random()* snowflakes.length));                                
+                                        buffer += snowflakes[rand];
+                                }
+                                buffer += "</li>";
+                        }
+                       
+                       
+                        //Lets just slap them there into the page now.
+                       
+                        $('#snowflake').html(buffer).text();
+ 
+                        //MAKE RANDOM FUN TIME                    
+                        setTimeout(function(){genSnow()}, 250);
+               
+                }
+ 
+                genSnow();
+ 
+               
+ 
+         });
+        </script>
+</head>
+<body>
+	
+	<ul class="snowflakes" id="snowflake">
+		<li>.•••.....•.....•..•❄..•❄•❄...•..❄...•.....</li>
+		<li>.❄.•....•.•.•.••.•....❄.........•❄...•....</li>
+		<li>•...••.•.❄...•..•...•..........•...••.•.•.</li>
+		<li>•.•....•.❄❄......•.....•.•❄......•......••</li>
+		<li>..•❄.....••..••..•.....❄••.......•........</li>
+		<li>.❄•........•.••.••...........••.....•.....</li>
+		<li>......•....❄.......•❄..•.•.•❄....•........</li>
+		<li>.•..•..........❄..•...•..•.......•.•❄...❄•</li>
+		<li>•..•........••.........❄•.................</li>
+		<li>.•.❄....••❄..•❄.❄•..•❄....................</li>		
+	</ul>
+	
+	<section class="sign">
+		<section class="post"></section>
+
+		<section class="front">
+			<h1>Merry Christmas!</h1>
+
+			<section class="item">
+				<p>What is your name?</p>
+				<input>
+			</section>
+			<section class="item">
+				<p>How much does Zac like you?</p>
+				<ol>
+					<li>0</li>
+					<li>1</li>
+					<li>2</li>
+					<li>3</li>
+					<li>4</li>
+					<li>5</li>
+				</ol>
+			</section>
+			
+			<section id="go">Make it already!</section>
+		</section>
+		<section class="post"></section>
+
+		<section class="tree" style="position:absolute;top: 88px;left: -309px;position: absolute;">
+			<ul>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</section>
+
+		<section class="tree" style="position:absolute;left: -229px;top: 107px;position: absolute;">
+			<ul>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</section>
+
+		<section class="tree" style="position:absolute;top: 88px;left: 809px;position: absolute;">
+			<ul>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</section>
+
+		<section class="tree" style="left: 717px;top: 110px;position: absolute;">
+			<ul>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</section>
+		
+	</section>
+	<section class="snow-hill">
+		<section class="card">
+			<section class="tree">
+				<ul>
+					<li id="starred"></li>
+					<li>•</li>
+					<li>•</li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+			</section>
+		</section>
+
+		
+		
+	</section>
+</body>
+</html>
