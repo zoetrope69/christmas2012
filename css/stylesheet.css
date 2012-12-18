@@ -118,6 +118,8 @@ body{
 
 .sign .front .item input:hover{
 	opacity: 0.9;
+	box-shadow: inset 0 2px 0px rgba(0, 0, 0, 0.1),
+				0 0 5px rgba(56, 111, 13, 0.2);
 }
 
 .sign .front .item ol li{
@@ -135,6 +137,8 @@ body{
 .sign .front .item ol li:hover{
 	cursor: pointer;
 	opacity: 0.9;
+	box-shadow: inset 0 2px 0 rgba(255,255,255,0.25),
+				0 0 5px rgba(56, 111, 13, 0.2);
 }
 
 .sign .front .item ol li.selected{
