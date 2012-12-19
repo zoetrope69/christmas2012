@@ -30,19 +30,19 @@ $(document).ready(function() {
 
         var likeness = 0;
 
-        $('#input_buttons>li').click(function(){
+        $('#input-buttons>li').click(function(){
 
-            $('#input_buttons>li').removeClass('selected');
+            $('#input-buttons>li').removeClass('selected');
             likeness = $(this).html();
             var number = Number(likeness) + 1;
-            $('#input_buttons>li:nth-child('+number+')').addClass('selected');
+            $('#input-buttons>li:nth-child('+number+')').addClass('selected');
 
         });
 
         $('#go').click(function(){
 
             for(i=1;i<7;i++){
-            out = $('#input_buttons>li:nth-child('+i+')').css('.sign .front .item ol li#selected');
+            out = $('#input-buttons>li:nth-child('+i+')').css('.sign .front .item ol li#selected');
             console.log(out);
             }
             //Grab them vals
@@ -53,10 +53,6 @@ $(document).ready(function() {
             return false;
         });
 
-
-
-        genSnow();
-
-       
+        genSnow();       
 
  });
