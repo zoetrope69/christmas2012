@@ -1,9 +1,10 @@
 *, html, body{ padding:0; margin:0; }
 
-body{ background-color: #F5F5F5; }
+body{
+    background-color: #1B1B1D;
+}
 
-.snowflakes{
-    width: 100%;
+.snowflakes{    
 	overflow: hidden;
 	text-align: center;
 	background-color: #1B1B1D;
@@ -238,8 +239,6 @@ body{ background-color: #F5F5F5; }
 .snow-hill{
 	padding: 10px 0;
 	background-color: #ECECF5;  
-	width: 100%;
-	height: 1000px;
     
     -webkit-box-shadow : inset 0 10px 0 -5px rgba(27, 27, 29, 0.05),  inset 0 20px 0 -10px rgba(27, 27, 29, 0.05),
 				         inset 0 30px 0 -15px rgba(27, 27, 29, 0.05), inset 0 40px 0 -20px rgba(27, 27, 29, 0.05);
@@ -395,8 +394,8 @@ body{ background-color: #F5F5F5; }
 .foliage .tree:nth-child(2){ top: 125px; left: -180px; }
 
 .foliage .tree:nth-child(6){ top: 140px; right: -130px; }
-.foliage .tree:nth-child(4){ top: 125px; right: -380px; }
-.foliage .tree:nth-child(7){ top: 140px; right: -300px; }
+.foliage .tree:nth-child(4){ top: 115px; right: -320px; }
+.foliage .tree:nth-child(7){ top: 140px; right: -270px; }
 .foliage .tree:nth-child(5){ top: 125px; right: -210px; }
 
 

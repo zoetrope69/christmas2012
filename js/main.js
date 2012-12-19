@@ -1,23 +1,27 @@
 $(document).ready(function() {
     
-        function genSnow() {
+         snowArray = genSnow();             // Generate the snow
+        var snowSpeed = 250;                // How fast should the snow move?
+        fallingSnow(snowArray, snowSpeed);  // Make the snow fall
+      //randomiseSnow(snowSpeed);           // Make the snow do random shit    
+    
+        function genSnow() { // Generate the snow
 
-            var snowArray = new Array();
+            var snowArray = new Array(); // Intialisation and resets
             var buffer = "";
             var rand = 0;
 
-            //Gen that snow anti-blanco
-            var snowflakes = ["■", ".", "•"];
-            var probability = [1, 3, 6] // Each item has a probability
+            var snowflakes = ["■", ".", "•"]; // Different snow items
+            var probability = [1, 3, 6]       // Each item has a probability
         
-            for(i = 10; i > 0; i--){
+            for(i = 10; i > 0; i--){ // 10 list items
                 buffer = "";
                 buffer += "<li>";
                 
-                for(b = 82; b > 0; b--){
+                for(b = 82; b > 0; b--){ // 82 characters in a list
                     rand = Math.floor((Math.random() * 10)); // Pick from 0 to 10
                 
-                    if (rand <= probability[0]){                                    
+                    if (rand <= probability[0]){ // Selection for the different probabilities                          
                         buffer += snowflakes[0];
                     }
                     else if(rand <= probability[1]){
@@ -30,65 +34,61 @@ $(document).ready(function() {
                 
                 buffer += "</li>";
                 
-                snowArray.push(buffer);
-            }               
-           
-            //Lets just slap them there into the page now.
-                       
-            $('#snowflake').html(snowArray).text();
+                snowArray.push(buffer); // Add list to the others
+            }    
+            
+            $('#snowflake').html(snowArray).text(); // Update the site
             return snowArray;  
         }
     
-        function fallingSnow(snowArray, snowSpeed) {
-            //Falling snow 
-            snowArray.splice(0, 0, snowArray[9]);
-            snowArray.splice(10, 1);     
+        function fallingSnow(snowArray, snowSpeed) { // Falling snow 
+            
+            snowArray.splice(0, 0, snowArray[9]); // Insert the last line to the front of the list
+            snowArray.splice(10, 1);              // Remove last line
                     
-            $('#snowflake').html(snowArray).text();
+            $('#snowflake').html(snowArray).text(); // Update the site
             
             setTimeout(function() { fallingSnow(snowArray, snowSpeed) }, snowSpeed);
         }
     
-        function randomiseSnow(snowSpeed) {
-            //MAKE RANDOM FUN TIME
+        function randomiseSnow(snowSpeed) { // Randomised snow
+            
             genSnow();
             setTimeout(function(){ randomiseSnow(snowSpeed) }, snowSpeed);
+            
         }
 
-        var likeness = 0;
+        var likeness = -1;
 
         $('#input-buttons>li').click( function() {
-
-            $('#input-buttons>li').removeClass('selected');
-            likeness = $(this).html();
-            var number = Number(likeness) + 1;
-            $('#input-buttons>li:nth-child(' + number + ')').addClass('selected');
-
+            
+            $('#input-buttons>li').removeClass('selected'); // Reset all selections
+            likeness = $(this).html(); // Grab text from button pressed
+            var number = Number(likeness) + 1; // Add one for indexing
+            $('#input-buttons>li:nth-child(' + number + ')').addClass('selected'); // Add style to the button selected
+            
         });
     
         var name = "";
+        var animationSpeed = 1000 // How fast it scrolls
 
         $('#go').click(function(){
-
-            for(i = 1; i < 7; i++){
-            out = $('#input-buttons>li:nth-child(' + i + ')').css('.sign .front .item ol li#selected');
-            console.log(out);
-            }
-            //Grab them vals
-            name = $('#input-name').val().toString();
+           
+            name = $('#input-name').val().toString();  // Get the name
             
-            if (name == ""){
-                alert("Fuck you");
+            if (name == ""){ // If they enter nothing
+                alert("Your didn't enter a name!?");
             }
-
-            alert('Your name is: ' + name + '.\nSanta likes you: ' + likeness + ' out of 5.');
-            //Stop the button from doing 
-            return false;
-        });
-        
-        snowArray = genSnow();
-        var snowSpeed = 250;
-        fallingSnow(snowArray, snowSpeed);
-      //randomiseSnow(snowSpeed);
+            else if (likeness == -1){ // If they don't select a 'likeness'
+                alert("You didn't select how much Santa likes you!");
+            }         
+            else{
+                 // How fast it should scroll
+                alert('Your name is: ' + name + '.\nSanta likes you: ' + likeness + ' out of 5.');
+                $('html, body').animate({scrollTop: 650}, animationSpeed); // Scroll to 650px from the top            
+            }
+            
+            event.preventDefault(); // Stop button's normal behaviour
+        }); 
     
  });
