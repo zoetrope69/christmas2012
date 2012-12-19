@@ -2,7 +2,8 @@
 
 body{ background-color: #F5F5F5; }
 
-.snowflakes{	
+.snowflakes{
+    width: 100%;
 	overflow: hidden;
 	text-align: center;
 	background-color: #1B1B1D;
@@ -114,10 +115,10 @@ body{ background-color: #F5F5F5; }
 	   -moz-box-shadow: inset 0 2px 0 rgba(0, 0, 0, 0.1);
 			box-shadow: inset 0 2px 0 rgba(0, 0, 0, 0.1);
 
-	-webkit-transition: all linear 5s;
-	   -moz-transition: all linear 5s;
-		 -0-transition: all linear 5s;
-			transition: all linear 5s;
+	-webkit-transition: opacity linear 2.5s;
+	   -moz-transition: opacity linear 2.5s;
+		 -0-transition: opacity linear 2.5s;
+			transition: opacity linear 2.5s;
 }
 
 .sign .front .item input:hover{
@@ -145,6 +146,11 @@ body{ background-color: #F5F5F5; }
 	-webkit-box-shadow: inset 0 2px 0 rgba(255,255,255,0.25);
 	   -moz-box-shadow: inset 0 2px 0 rgba(255,255,255,0.25);
 			box-shadow: inset 0 2px 0 rgba(255,255,255,0.25);
+    
+    -webkit-transition: opacity linear 2.5s;
+	   -moz-transition: opacity linear 2.5s;
+		 -0-transition: opacity linear 2.5s;
+			transition: opacity linear 2.5s;
 }
 
 .sign .front .item ol li:hover{
