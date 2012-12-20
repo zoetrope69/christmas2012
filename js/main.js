@@ -85,6 +85,7 @@ $(document).ready(function() {
             else{
                  // How fast it should scroll
                 alert('Your name is: ' + name + '.\nSanta likes you: ' + likeness + ' out of 5.');
+                $('#name').text(name);
                 $('html, body').animate({scrollTop: 650}, animationSpeed); // Scroll to 650px from the top            
             }
             
