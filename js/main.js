@@ -126,7 +126,7 @@ $(document).ready(function() {
         
         $('#toTheTop').click(function(){
             
-            $('.card').removeClass('opencard opencard-back'); // 'Close' the card
+            setTimeout(function() { $('.card').removeClass('opencard opencard-back'); }, 1000); // 'Open' the card   
             $('.card, .card-back').fadeOut(1000);  
             $('#toTheTop').fadeOut(100);
             $('html, body').animate({scrollTop: 10}, 1000); // Scroll to the top

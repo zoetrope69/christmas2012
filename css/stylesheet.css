@@ -766,6 +766,8 @@ background: linear-gradient(to bottom, #a90329 0%,#8f0222 44%,#6d0019 100%);
   	border-radius: 0 3px 3px 0;
     width: 450px;
         
+    border: 1px solid #DDD;    
+
 	-webkit-box-shadow: -3px 3px 10px rgba(27, 27, 29, 0.05);
 	   -moz-box-shadow: -3px 3px 10px rgba(27, 27, 29, 0.05);
 	        box-shadow: -3px 3px 10px rgba(27, 27, 29, 0.05);
@@ -786,7 +788,7 @@ background: linear-gradient(to bottom, #a90329 0%,#8f0222 44%,#6d0019 100%);
     background: -o-linear-gradient(left, #F0F0F0 0%, #FFF 100%);
     background: linear-gradient(left, #F0F0F0 0%, #FFF 100%);   
 
-  	border: 1px solid #DDD;
+  
 
   	-webkit-transform: rotateY(180deg) skewY(5deg);
 	   -moz-transform: rotateY(180deg) skewY(5deg);
