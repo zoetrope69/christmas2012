@@ -708,6 +708,9 @@ body{
 
 .card-back #greeting{
     padding: 50px 50px 0;
+    height: 105px;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 
 .card-back #message{
@@ -778,14 +781,7 @@ background: linear-gradient(to bottom, #a90329 0%,#8f0222 44%,#6d0019 100%);
 
 .opencard{
     margin: -501px auto 145px;
-    background: #F5F5F5;
-    background: -webkit-gradient(linear, 0 0, 100% 0, from(#F0F0F0), to(#FFF));
-    background: -webkit-linear-gradient(left, #F0F0F0 0%, #FFF 100%);
-    background: -moz-linear-gradient(left, #F0F0F0 0%, #FFF 100%);
-    background: -o-linear-gradient(left, #F0F0F0 0%, #FFF 100%);
-    background: linear-gradient(left, #F0F0F0 0%, #FFF 100%);   
 
-  	border: 1px solid #DDD;
   	border-radius: 0 3px 3px 0;
     width: 450px;
         
@@ -793,12 +789,29 @@ background: linear-gradient(to bottom, #a90329 0%,#8f0222 44%,#6d0019 100%);
 	   -moz-box-shadow: -3px 3px 10px rgba(27, 27, 29, 0.05);
 	        box-shadow: -3px 3px 10px rgba(27, 27, 29, 0.05);
 
-	-webkit-transform: rotateY(180deg) skewY(5deg);
+	-webkit-transform: rotateY(90deg) skewY(5deg);
+	   -moz-transform: rotateY(90deg) skewY(5deg);
+		-ms-transform: rotateY(90deg) skewY(5deg);
+		 -o-transform: rotateY(90deg) skewY(5deg);
+			transform: rotateY(90deg) skewY(5deg);
+
+}
+
+.opencard-back {
+	background: #F5F5F5;
+    background: -webkit-gradient(linear, 0 0, 100% 0, from(#F0F0F0), to(#FFF));
+    background: -webkit-linear-gradient(left, #F0F0F0 0%, #FFF 100%);
+    background: -moz-linear-gradient(left, #F0F0F0 0%, #FFF 100%);
+    background: -o-linear-gradient(left, #F0F0F0 0%, #FFF 100%);
+    background: linear-gradient(left, #F0F0F0 0%, #FFF 100%);   
+
+  	border: 1px solid #DDD;
+
+  	-webkit-transform: rotateY(180deg) skewY(5deg);
 	   -moz-transform: rotateY(180deg) skewY(5deg);
 		-ms-transform: rotateY(180deg) skewY(5deg);
 		 -o-transform: rotateY(180deg) skewY(5deg);
 			transform: rotateY(180deg) skewY(5deg);
-
 }
 
 .card .tree, .card .snowman{	

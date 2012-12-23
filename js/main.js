@@ -108,8 +108,9 @@ $(document).ready(function() {
           
             $('.card, .card-back, #toTheTop').fadeIn(10);
             $('.card section').show();
-            $('html, body').animate({scrollTop: 700}, animationSpeed); // Scroll to 750px from the top               
-            setTimeout(function() { $('.card').addClass('opencard'); $('.card section').delay(1000).hide(); }, 1500); // 'Open' the card   
+            $('html, body').animate({scrollTop: 700}, animationSpeed); // Scroll to 750px from the top  
+            setTimeout(function() { $('.card').addClass('opencard'); }, 800);              
+            setTimeout(function() { $('.card').addClass('opencard-back'); $('.card section').hide(); }, 1200); // 'Open' the card   
             }
             
             event.preventDefault(); // Stop button's normal behaviour
@@ -117,7 +118,7 @@ $(document).ready(function() {
         
         $('#toTheTop').click(function(){
             
-            $('.card').removeClass('opencard'); // 'Close' the card   
+            $('.card').removeClass('opencard opencard-back'); // 'Close' the card
             $('.card, .card-back').fadeOut(1000);  
             $('#toTheTop').fadeOut(100);
             $('html, body').animate({scrollTop: 10}, 1000); // Scroll to the top
