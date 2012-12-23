@@ -100,7 +100,7 @@ $(document).ready(function() {
         
         $('#toTheTop').click(function(){
             
-            setTimeout(function() { $('.card').removeClass('opencard') }, 2500); // 'Close' the card   
+            $('.card').removeClass('opencard'); // 'Close' the card   
             $('.card, .card-back').fadeOut(1000);  
             $('#toTheTop').fadeOut(100);
             $('html, body').animate({scrollTop: 10}, 1000); // Scroll to the top
