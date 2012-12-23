@@ -57,7 +57,7 @@ body{
 	font-weight: 100;
 }
 
-.snowflakes li::selection{
+.snowflakes li::selection, .snowflakes li::-moz-selection{
 	color: rgba(255, 255, 255, 0.75);
 	background: transparent;
 }	
@@ -124,7 +124,7 @@ body{
     -webkit-text-fill-color: transparent;
 }
 
-.sign .front h1::selection{
+.sign .front h1 big::-moz-selection, .sign .front h1 big::selection{
 	color: rgb(218, 58, 58);
 	background: #FFFFFF;
 }

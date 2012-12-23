@@ -5,11 +5,7 @@ $(document).ready(function() {
         fallingSnow(snowArray, snowSpeed);  // Make the snow fall
       //randomiseSnow(snowSpeed);           // Make the snow do random shit    
     
-        var jsonUrl = 'js/cardtext.json';
-        $.getJSON(jsonUrl, function(jsonData) {
-            alert(jsonData.text[0].message);
-        });
-        
+              
         function genSnow() { // Generate the snow
 
             var snowArray = new Array(); // Intialisation and resets
@@ -87,12 +83,27 @@ $(document).ready(function() {
             else if (likeness == -1){ // If they don't select a 'likeness'
                 alert("You didn't select how much Santa likes you!");
             }         
-            else{               
-                $('#name').text(name);
-                $('.card, .card-back, #toTheTop').fadeIn(10);
-                $('.card section').show();
-                $('html, body').animate({scrollTop: 700}, animationSpeed); // Scroll to 750px from the top               
-                setTimeout(function() { $('.card').addClass('opencard'); $('.card section').delay(1000).hide(); }, 1500); // 'Open' the card   
+            else{
+            
+            var text = [
+            { "greeting": "", "message": "FUCK YOU", "signed": "" },
+            { "greeting": "", "message": "What do you want?", "signed": "S" },
+            { "greeting": "To [default],", "message": "", "signed": "From, Santa" },
+            { "greeting": "[default],", "message": "Merry Christmas!", "signed": "Love from, Santa Claus" },
+            { "greeting": "Dear [default],","message": "Merry Christmas and a Happy New Year!", "signed": "Lots of love, Father Christmas" },
+            { "greeting": "To my dearest [default],", "message": "*insert story here*", "signed": "Yours, Father 'John' Christmas" }
+            ];
+            
+            var greeting = (text[likeness].greeting).replace('[default]', name);
+           
+            $('#greeting').text(greeting);            
+            $('#message').text(text[likeness].message);
+            $('#signed').text(text[likeness].signed);                   
+          
+            $('.card, .card-back, #toTheTop').fadeIn(10);
+            $('.card section').show();
+            $('html, body').animate({scrollTop: 700}, animationSpeed); // Scroll to 750px from the top               
+            setTimeout(function() { $('.card').addClass('opencard'); $('.card section').delay(1000).hide(); }, 1500); // 'Open' the card   
             }
             
             event.preventDefault(); // Stop button's normal behaviour
