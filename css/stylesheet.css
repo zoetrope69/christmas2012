@@ -2,8 +2,8 @@
 
 body{
     overflow: hidden;
-    background-color: #ECECF5;    
-	font-family: Helvetica, Arial, serif;
+    background: -webkit-linear-gradient(#ECECF5, #9797a5);	  
+	font-family: Helvetica, Arial, sans-serif;
 }
 
 
@@ -118,6 +118,10 @@ body{
 	color: rgb(218, 58, 58);
     font-size: 28px;
     text-transform: uppercase;
+    
+    background: -webkit-linear-gradient( rgb(237, 105, 105),  rgb(218, 58, 58));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .sign .front h1::selection{
@@ -229,7 +233,7 @@ body{
 	color: rgba(0, 0, 0, 0.4);
 	text-shadow: 0 2px 0 rgba(255, 255, 255, 0.08);	
 	font-size: 22px;
-	text-transform: uppercase;
+	text-transform: uppercase;	
 	background-color: #EB4040;
 	border: 0;
 
@@ -368,8 +372,6 @@ body{
                          inset 0 30px 0 -15px rgba(27, 27, 29, 0.05), inset 0 40px 0 -20px rgba(27, 27, 29, 0.05);
 }
 
-
-
 .presents .present{
 	position: absolute;
 	width: 74px;
@@ -433,8 +435,7 @@ body{
 	border-bottom: 3px solid #333333;	
 }
 
-.present ul li:nth-child(2){
-	
+.present ul li:nth-child(2){	
 	border-left: 3px solid #333333;	
 	border-bottom: 3px solid #333333;
 }
@@ -599,7 +600,7 @@ body{
     letter-spacing: -6px;
     color: #3d69ff;
     font-size: 40px;
-    font-weight: 900;
+    font-weight: 900;    
 }
 
 .snowman ul li:nth-child(5){
@@ -737,13 +738,11 @@ body{
 		 -0-transition: all linear 0.4s;
 			transition: all linear 0.4s;
 
-	-webkit-transform-origin:0% 50%; 
-	   -moz-transform-origin:0% 50%; 	
-		-ms-transform-origin:0% 50%;
-		 -o-transform-origin:0% 50%; 
-			transform-origin:0% 50%;
-
-
+	-webkit-transform-origin: 0% 50%; 
+	   -moz-transform-origin: 0% 50%; 	
+		-ms-transform-origin: 0% 50%;
+		 -o-transform-origin: 0% 50%; 
+			transform-origin: 0% 50%;
 }
 
 .alternate{
@@ -752,25 +751,21 @@ body{
 }
 
 .opencard{
-    margin: -500px auto 145px; 
-
-    background: #F0F0F0;
-
+    margin: -500px auto 145px;
+    background: #F5F5F5;
     border: none;
-   
-    
+        
 	-webkit-box-shadow: -3px 3px 10px rgba(27, 27, 29, 0.05);
 	   -moz-box-shadow: -3px 3px 10px rgba(27, 27, 29, 0.05);
 	        box-shadow: -3px 3px 10px rgba(27, 27, 29, 0.05);
 
-	-webkit-transform: rotateY(180deg);
-	   -moz-transform: rotateY(180deg);
-		-ms-transform: rotateY(180deg);
-		 -o-transform: rotateY(180deg);
-			transform: rotateY(180deg);
+	-webkit-transform: rotateY(180deg) skewY(5deg);
+	   -moz-transform: rotateY(180deg) skewY(5deg);
+		-ms-transform: rotateY(180deg) skewY(5deg);
+		 -o-transform: rotateY(180deg) skewY(5deg);
+			transform: rotateY(180deg) skewY(5deg);
 
 }
-
 
 .card .tree, .card .snowman{	
 	margin-top: 85px;
@@ -782,7 +777,7 @@ body{
             transform: scale(1.5);	
 }
 
-#toTheTop{
+a#toTheTop{
     position: fixed;
     left: 50px;
     top: 50px;

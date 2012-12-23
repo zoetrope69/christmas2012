@@ -86,18 +86,21 @@ $(document).ready(function() {
                  // How fast it should scroll
                 $('#name').text(name);
                 $('.card, .card-back, #toTheTop').fadeIn(10);
+                $('.card section').show();
                 $('html, body').animate({scrollTop: 700}, animationSpeed); // Scroll to 750px from the top               
-                setTimeout(function() { $('.card').addClass('opencard'); $('.card').html(""); }, 1500); // 'Open' the card   
+                setTimeout(function() { $('.card').addClass('opencard'); $('.card section').delay(1000).hide(); }, 1500); // 'Open' the card   
             }
             
             event.preventDefault(); // Stop button's normal behaviour
         });
         
         $('#toTheTop').click(function(){
+            
             setTimeout(function() { $('.card').removeClass('opencard') }, 2500); // 'Close' the card   
+            $('.card, .card-back').fadeOut(1000);  
             $('#toTheTop').fadeOut(100);
             $('html, body').animate({scrollTop: 10}, 1000); // Scroll to the top
-            $('.card, .card-back').fadeOut(2000); 
+                    
             event.preventDefault(); // Stop button's normal behaviour            
         });
         
