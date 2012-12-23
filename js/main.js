@@ -85,7 +85,7 @@ $(document).ready(function() {
             }         
             else{
             
-            var text = [
+            var text = [ 
             { "greeting": "", "message": "FUCK YOU", "signed": "" },
             { "greeting": "", "message": "What? Go away", "signed": "S" },
             { "greeting": "To [default],", "message": "MC", "signed": "From, Santa" },
@@ -94,7 +94,13 @@ $(document).ready(function() {
             { "greeting": "To my dearest [default],", "message": "*insert story here*", "signed": "Yours, Father 'John' Christmas" }
             ];
             
-            var greeting = (text[likeness].greeting).replace('[default]', name);
+            var greeting = (text[likeness].greeting).replace('[default]', name);         
+            if (text[likeness].message.length > 35){
+                var messageFontSize = '45px'
+            }else if (text[likeness].message.length > 15){
+                var messageFontSize = '65px'
+            }
+            $('#message').css('font-size', messageFontSize);
            
             $('#greeting').text(greeting);            
             $('#message').text(text[likeness].message);
