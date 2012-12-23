@@ -88,23 +88,31 @@ $(document).ready(function() {
             var text = [ 
             { "greeting": "", "message": "FUCK YOU", "signed": "" },
             { "greeting": "", "message": "What? Go away", "signed": "S" },
-            { "greeting": "To [default],", "message": "MC", "signed": "From, Santa" },
-            { "greeting": "[default],", "message": "Merry Christmas!", "signed": "Love from, Santa Claus" },
-            { "greeting": "Dear [default],","message": "Merry Christmas and a Happy New Year!", "signed": "Lots of love, Father Christmas" },
-            { "greeting": "To my dearest [default],", "message": "*insert story here*", "signed": "Yours, Father 'John' Christmas" }
+            { "greeting": "name,", "message": "MC", "signed": "From, Santa" },
+            { "greeting": "To name,", "message": "Merry Christmas!", "signed": "Love from, Santa Claus" },
+            { "greeting": "Dear name,","message": "Merry Christmas and a Happy New Year!", "signed": "Lot\'s of love, Father Christmas" },
+            { "greeting": "To my dearest name,", "message": "Once upon a time there was an elf called Zac. He/she/it was a good elf and helped Santa immensely. One day Santa asked Zac to go to France and eat every baguette he could find. This was no challenge for the young elf and every bakery was pillaged thoroughly. Santa then got pissed off because the French embassy told him he wasn't welcome anymore so he told Zac to leave and never come back. Moral is don't work for Santa. He is a slave driver.", "signed": "Yours, Father 'John' Christmas" }
             ];
             
-            var greeting = (text[likeness].greeting).replace('[default]', name);         
-            if (text[likeness].message.length > 35){
-                var messageFontSize = '45px'
-            }else if (text[likeness].message.length > 15){
-                var messageFontSize = '65px'
+            var greeting = text[likeness].greeting.replace(/name/g, name);
+            var message = text[likeness].message.replace(/name/g, name);
+            var signed = text[likeness].signed;
+            
+            if (text[likeness].message.length > 50){
+                var messageFontSize = '15px';
+            }else if (text[likeness].message.length > 35){
+                var messageFontSize = '45px';
+            }else if (text[likeness].message.length > 8){
+                var messageFontSize = '65px';
+            }else if (text[likeness].message.length <= 8){
+                var messageFontSize = '85px';
             }
+            
             $('#message').css('font-size', messageFontSize);
            
             $('#greeting').text(greeting);            
-            $('#message').text(text[likeness].message);
-            $('#signed').text(text[likeness].signed);                   
+            $('#message').text(message);
+            $('#signed').text(signed);                   
           
             $('.card, .card-back, #toTheTop').fadeIn(10);
             $('.card section').show();
