@@ -87,7 +87,7 @@ $(document).ready(function() {
                 $('#name').text(name);
                 $('.card, .card-back, #toTheTop').fadeIn(10);
                 $('html, body').animate({scrollTop: 700}, animationSpeed); // Scroll to 750px from the top               
-                setTimeout(function() { $('.card').addClass('opencard') }, 1500); // 'Open' the card   
+                setTimeout(function() { $('.card').addClass('opencard'); $('.card').html(""); }, 1500); // 'Open' the card   
             }
             
             event.preventDefault(); // Stop button's normal behaviour
