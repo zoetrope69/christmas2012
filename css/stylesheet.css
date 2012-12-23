@@ -723,31 +723,34 @@ body{
             transform: scale(1.5);	
 }
 
-a#toTheTop{
+#toTheTop{
     position: fixed;
     left: 50px;
-    top: 10px;
-    padding: 10px;
-    height: 50px;
-    width: 50px;
+    top: 50px;
+    padding: 5px;
+    width: 55px;
     text-align: center;
-    color: rgba(0, 0, 0, 0.8);
-    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+    color: rgba(0, 0, 0, 0.5);
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.05);
     font-weight: 900;
-    font-size: 14px;
+    font-size: 20px;
+    text-decoration: none;
     text-transform: uppercase;
     border: 1px solid rrgba(0, 0, 0, 0.5);
-    background-color: rgba(0, 0, 0, 0.25);
+    background-color: rgba(0, 0, 0, 0.1);
     
-    -webkit-border-radius: 5px;
-       -moz-border-radius: 5px;
-            border-radius: 5px;
+    -webkit-border-radius: 2px;
+       -moz-border-radius: 2px;
+            border-radius: 2px;
+            
+    -webkit-box-shadow: 0 6px 0 -2px rgba(0, 0, 0, 0.05);
+       -moz-box-shadow: 0 6px 0 -2px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 6px 0 -2px rgba(0, 0, 0, 0.05);
 }
 
-a#topTheTop:hover{
+#toTheTop:hover{
     cursor: pointer;
-    opacity: 0.4;
-    color: red;
+    opacity: 0.9;
 }
 
 footer{ 
