@@ -87,8 +87,8 @@ $(document).ready(function() {
             
             var text = [
             { "greeting": "", "message": "FUCK YOU", "signed": "" },
-            { "greeting": "", "message": "What do you want?", "signed": "S" },
-            { "greeting": "To [default],", "message": "", "signed": "From, Santa" },
+            { "greeting": "", "message": "What? Go away", "signed": "S" },
+            { "greeting": "To [default],", "message": "MC", "signed": "From, Santa" },
             { "greeting": "[default],", "message": "Merry Christmas!", "signed": "Love from, Santa Claus" },
             { "greeting": "Dear [default],","message": "Merry Christmas and a Happy New Year!", "signed": "Lots of love, Father Christmas" },
             { "greeting": "To my dearest [default],", "message": "*insert story here*", "signed": "Yours, Father 'John' Christmas" }

@@ -6,7 +6,6 @@ body{
 	font-family: Helvetica, Arial, sans-serif;
 }
 
-
 .ribbon{
     position: absolute;
     width: 100%;
@@ -290,22 +289,19 @@ body{
 
 #card-selection{
     position: absolute;
-    padding: 10px 5px 8px;
-    width: 400px;
+    padding: 6px 5px;
+    width: 330px;
     top: 240px;
-    left: 150px;
+    left: 210px;
     
     text-align: center;
     background-color: #e2cc94;
     border: 2px solid #4E0A0A;
     border-top: 0;
     
-    -webkit-border-bottom-right-radius: 2px;
-     -webkit-border-bottom-left-radius: 2px;
-        -moz-border-radius-bottomright: 2px;
-         -moz-border-radius-bottomleft: 2px;
-            border-bottom-right-radius: 2px;
-             border-bottom-left-radius: 2px;
+    -webkit-border-radius: 0 0 2px 2px;
+       -moz-border-radius: 0 0 2px 2px;
+            border-radius: 0 0 2px 2px;
             
     -webkit-box-shadow: 0 6px 0 -4px rgba(0, 0, 0, 0.1), inset 0 6px 0 -4px rgba(0, 0, 0, 0.1);
        -moz-box-shadow: 0 6px 0 -4px rgba(0, 0, 0, 0.1), inset 0 6px 0 -4px rgba(0, 0, 0, 0.1);
@@ -314,8 +310,8 @@ body{
 
 #card-selection > p{
     float: left;
-    margin: 3px 0  0 10px;
-    color: #4E0A0A;
+    margin: 4px;
+    color: #1E0A0A;
     font-size: 12px;
     font-weight: 400;
 }
@@ -331,6 +327,7 @@ body{
 #card-selection ul li input{
     padding: 2px 5px;
     color: #4E0A0A;
+    font-size: 10px;
     text-transform: uppercase;
     background-color: #e2cc94;
     border: 1px solid #4E0A0A;  
@@ -495,8 +492,9 @@ body{
 }
 
 .tree ul li:nth-child(1){ width: 0px;  border-bottom: 40px solid  #0C8F0C; }
-.tree ul li:nth-child(2){ width: 40px; border-bottom: 40px solid  #0A800A; color: #F14949; }
-.tree ul li:nth-child(3){ width: 80px; border-bottom: 40px solid  #056B05; color: #85F149; }
+.tree ul li:nth-child(2){ width: 40px; border-bottom: 40px solid  #0A800A; }
+.tree ul li:nth-child(3){ width: 80px; border-bottom: 40px solid  #056B05; }
+
 
 .tree ul li#starred{
 	width: 10px;
@@ -508,10 +506,10 @@ body{
 	margin-left: -10px;
 }
 
-.tree ul li:nth-child(4){	
- 	color: #6449F1;		
+.tree ul li:nth-child(4){
 	width: 45px;
 	height: 10px;
+ 	color: #6449F1;		
 	background-color: #630202;			
 }
 
@@ -731,7 +729,10 @@ body{
 	padding: 75px 15px;
 	background-color: #023302;
 	border: 4px solid #E01A1A;
-	border-radius: 0 8px 8px 0;
+	
+	-webkit-border-radius: 0 8px 8px 0;
+	   -moz-border-radius: 0 8px 8px 0;
+	        border-radius: 0 8px 8px 0;	
     
     -webkit-transform: skewY(5deg);
        -moz-transform: skewY(5deg);  
@@ -790,12 +791,23 @@ body{
             transform: scale(1.5);	
 }
 
+.card  .tree ul li:nth-child(2):after{
+    content: '•';
+    display: block;
+    color: #F14949;
+}
+
+.card .tree ul li:nth-child(3):after{
+    content: '•';
+    display: block;
+    color: #85F149;
+}
+
 a#toTheTop{
     position: fixed;
-    left: 50px;
-    top: 50px;
-    padding: 5px;
-    width: 55px;
+    left: 580px;
+    top: 10px;
+    padding: 5px 20px;
     text-align: center;
     color: rgba(0, 0, 0, 0.5);
     text-shadow: 0 1px 0 rgba(0, 0, 0, 0.05);
