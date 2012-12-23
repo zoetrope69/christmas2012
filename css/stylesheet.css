@@ -329,11 +329,14 @@ body{
 	border-top: 3px solid #333333;	
 }
 
-.tree{ cursor: default; }
+.tree, .snowman{ cursor: default; }
 
-.tree ul li{
-	list-style-type: none;
-	margin: 0 auto;
+.tree ul li, .snowman ul li{
+    list-style-type: none;
+	margin: 0 auto;    
+}
+
+.tree ul li{	
 	font-size: 2.5em;
 	text-align: center;
 	line-height: 0;
@@ -378,6 +381,86 @@ body{
 	border-top: 12px solid #E01A1A;
 }
 
+.snowman ul li:nth-child(2){
+    width: 30px;
+    margin-top: -105px;
+    height: 30px;
+    border-bottom: 4px solid #fff;
+    background-color: #000;
+}
+
+.snowman ul li:nth-child(1)::selection, .snowman ul li:nth-child(4)::selection{
+    color: #000;
+    background-color: transparent;
+}
+
+.snowman ul li:nth-child(3){
+    width: 50px;
+    height: 8px;
+    background-color: #000;    
+}
+
+.snowman ul li:nth-child(1), .snowman ul li:nth-child(4), .snowman ul li:nth-child(5){
+    background-color: #FFF;
+    
+    -webkit-border-radius: 50%;
+       -moz-border-radius: 50%;
+            border-radius: 50%;
+}
+
+.snowman ul li:nth-child(1){
+    width: 70px;
+    height: 40px;
+    padding: 15px 0;
+    text-align: right;
+    letter-spacing: 15px;
+}
+    
+.snowman ul li:nth-child(1):after{
+    content: '>';
+    display: block;
+    line-height: 0;
+    color: orange;
+    font-weight: 900;
+} 
+    
+.snowman ul li:nth-child(4){
+    margin-top: 30px;
+    padding: 20px 40px;
+    width: 10px;
+    height: 50px;
+    font-size: 20px;
+    text-align: right;
+    line-height: 10px;    
+    word-wrap: break;
+}
+
+.snowman ul li:nth-child(4):before{
+    content: '=~~~~';
+    display: block;
+    margin: -10px 0px 10px -52px;
+    letter-spacing: -6px;
+    color: red;
+    stroke: 1px solid black;
+    font-size: 40px;
+    font-weight: 900;
+}
+
+.snowman ul li:nth-child(5){
+    margin-top: -35px;
+    width:  120px;
+    height: 120px;  
+}
+
+.snowman ul li:nth-child(5):after{
+    content: '';
+    display: block;
+    position: relative;
+    background-color: #023302;
+    top: 100px;
+    height: 20px;
+}
+
 .foliage section.tree{ position: absolute; }
 
 .foliage .tree:nth-child(even){}
@@ -418,7 +501,7 @@ body{
 }
 
 .card-back p{
-    color: red;
+    color: #ff3838;
     text-shadow: 0 2px 0 rgba(0, 0, 0, 0.15);
     font-family: Georgia, "Times New Roman", serif;
     font-style: italic;
@@ -445,7 +528,6 @@ body{
     font-size: 55px;
 }
 
-
 .card{
     z-index: 1337;
 	width: 600px;
@@ -471,7 +553,7 @@ body{
    opacity: 0;
 }
 
-.card .tree{	
+.card .tree, .card .snowman{	
 	margin-top: 85px;
     
     -webkit-transform: scale(1.5);	
