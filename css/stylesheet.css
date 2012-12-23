@@ -666,10 +666,17 @@ body{
     margin: 400px auto 0;
     width: 500px;
 	height: 500px;
-	background: -webkit-radial-gradient(center, ellipse cover, white 0%,#ECECEC 100%);
+
+	background: -moz-radial-gradient(center, ellipse cover, white 0%, #ECECEC 100%); /* FF3.6+ */
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,white), color-stop(100%,#ECECEC)); /* Chrome,Safari4+ */
+	background: -webkit-radial-gradient(center, ellipse cover, white 0%,#ECECEC 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-radial-gradient(center, ellipse cover, white 0%,#ECECEC 100%); /* Opera 12+ */
+	background: -ms-radial-gradient(center, ellipse cover, white 0%,#ECECEC 100%); /* IE10+ */
+	background: radial-gradient(ellipse at center, white 0%,#ECECEC 100%); /* W3C */
+
     background-color: #F5F5F5;
     border: 1px solid #DDD;   
-    border-radius: 0 8px 8px 0;
+    border-radius: 0 3px 3px 0;
     
     -webkit-box-sizing: border-box; 
        -moz-box-sizing: border-box;
@@ -721,12 +728,19 @@ body{
 	height: 500px;
 	margin: -499px auto 120px;
 	padding: 75px 15px;
-	background-color: #023302;
-	border: 4px solid #E01A1A;
+background: #a90329;
+background: -moz-linear-gradient(top, #a90329 0%, #8f0222 44%, #6d0019 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#a90329), color-stop(44%,#8f0222), color-stop(100%,#6d0019));
+background: -webkit-linear-gradient(top, #a90329 0%,#8f0222 44%,#6d0019 100%);
+background: -o-linear-gradient(top, #a90329 0%,#8f0222 44%,#6d0019 100%);
+background: -ms-linear-gradient(top, #a90329 0%,#8f0222 44%,#6d0019 100%);
+background: linear-gradient(to bottom, #a90329 0%,#8f0222 44%,#6d0019 100%);
+
+	border: 2px solid #E01A1A;
 	
-	-webkit-border-radius: 0 8px 8px 0;
-	   -moz-border-radius: 0 8px 8px 0;
-	        border-radius: 0 8px 8px 0;	
+	-webkit-border-radius: 0 3px 3px 0;
+	   -moz-border-radius: 0 3px 3px 0;
+	        border-radius: 0 3px 3px 0;	
     
     -webkit-transform: skewY(5deg);
        -moz-transform: skewY(5deg);  
@@ -752,15 +766,27 @@ body{
 
 .alternate{
     background-color: #a8d0d3;
-	border: 4px solid #89a4ff;
+	background: -moz-radial-gradient(center, ellipse cover, #becfd1 0%, #00c3d1 100%); 
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#becfd1), color-stop(100%,#00c3d1));
+	background: -webkit-radial-gradient(center, ellipse cover, #becfd1 0%,#00c3d1 100%);
+	background: -o-radial-gradient(center, ellipse cover, #becfd1 0%,#00c3d1 100%); 
+	background: -ms-radial-gradient(center, ellipse cover, #becfd1 0%,#00c3d1 100%); 
+	background: radial-gradient(ellipse at center, #becfd1 0%,#00c3d1 100%); 
+
+	border: 2px solid #89a4ff;
 }
 
 .opencard{
     margin: -501px auto 145px;
     background: #F5F5F5;
-    background: -webkit-linear-gradient(left, #F0F0F0 0%,#FFF 100%);    
+    background: -webkit-gradient(linear, 0 0, 100% 0, from(#F0F0F0), to(#FFF));
+    background: -webkit-linear-gradient(left, #F0F0F0 0%, #FFF 100%);
+    background: -moz-linear-gradient(left, #F0F0F0 0%, #FFF 100%);
+    background: -o-linear-gradient(left, #F0F0F0 0%, #FFF 100%);
+    background: linear-gradient(left, #F0F0F0 0%, #FFF 100%);   
+
   	border: 1px solid #DDD;
-  	border-radius: 0 8px 8px 0;
+  	border-radius: 0 3px 3px 0;
     width: 450px;
         
 	-webkit-box-shadow: -3px 3px 10px rgba(27, 27, 29, 0.05);
