@@ -1,6 +1,6 @@
 $(document).ready(function() {
     
-         snowArray = genSnow();             // Generate the snow
+        snowArray = genSnow();              // Generate the snow
         var snowSpeed = 250;                // How fast should the snow move?
         fallingSnow(snowArray, snowSpeed);  // Make the snow fall
       //randomiseSnow(snowSpeed);           // Make the snow do random shit    
@@ -84,12 +84,37 @@ $(document).ready(function() {
             }         
             else{
                  // How fast it should scroll
-                alert('Your name is: ' + name + '.\nSanta likes you: ' + likeness + ' out of 5.');
                 $('#name').text(name);
-                $('html, body').animate({scrollTop: 650}, animationSpeed); // Scroll to 650px from the top            
+                $('.card, .card-back, #toTheTop').fadeIn(10);
+                $('html, body').animate({scrollTop: 700}, animationSpeed); // Scroll to 750px from the top               
+                setTimeout(function() { $('.card').addClass('opencard') }, 1500); // 'Open' the card   
             }
             
             event.preventDefault(); // Stop button's normal behaviour
-        }); 
+        });
+        
+        $('#toTheTop').click(function(){
+            setTimeout(function() { $('.card').removeClass('opencard') }, 2500); // 'Close' the card   
+            $('#toTheTop').fadeOut(100);
+            $('html, body').animate({scrollTop: 10}, 1000); // Scroll to the top
+            $('.card, .card-back').fadeOut(1500); 
+            event.preventDefault(); // Stop button's normal behaviour            
+        });
+        
+        $('#card-selection ul li input').click(function(){
+            
+            var selection = $(this).attr('value'); // Get value of button selected
+            $('#card-selection ul li input').removeClass('selected'); // Reset
+            $(this).addClass('selected'); // Add .selected to selected button
+            
+            if (selection == 'Snowman'){ // If 'Snowman' is selected
+                $('.card').html('<section class="snowman"><ul><li>••</li><li></li><li></li><li>• • •</li><li></li><li></li></ul>');
+                $('.card').addClass('alternate');
+            }else{ // If 'Christmas Tree' is selected
+                $('.card').html('<section class="tree"><ul><li id="starred"></li><li>•</li><li>•</li><li></li><li></li><li></li></ul></section>');
+                $('.card').removeClass('alternate');
+            }
+           
+        });
     
  });

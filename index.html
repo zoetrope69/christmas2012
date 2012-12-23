@@ -13,24 +13,24 @@
 <body>
 	
 	<ul class="snowflakes" id="snowflake">
-		<li>.•••.....•.....•..•■..•■•■...•..■...•.....</li>
-		<li>.■.•....•.•.•.••.•....■.........•■...•....</li>
-		<li>•...••.•.■...•..•...•..........•...••.•.•.</li>
-		<li>•.•....•.■■......•.....•.•■......•......••</li>
-		<li>..•■.....••..••..•.....■••.......•........</li>
-		<li>.■•........•.••.••...........••.....•.....</li>
-		<li>......•....■.......•■..•.•.•■....•........</li>
-		<li>.•..•..........■..•...•..•.......•.•■...■•</li>
-		<li>•..•........••.........■•.................</li>
-		<li>.•.■....••■..•■.■•..•■....................</li>		
-	</ul>
+	    <li>••••■.■.•■•••.•••••■•.••.•.•.■..•■.•.•.•••••.■.••..■...••...•••••••■•■.•.•.•..•••.</li>
+	    <li>•■•.••••■••■••.•..•■•■•.•••■■■•••..••■•.■■•••••••■..■•■••■•■•••■••••.••••■•.•••.■•</li>
+	    <li>■••■••••■..■.■••.•.•••••..•■.•••■••■..•.■••■■.•■•••.••■••••.•■•.••••■.••••■•■••■••</li>
+	    <li>•..•.••••••■■.■••.•.••■.•.•■.•■...•■••.■•...•••■••••.••■■.••.■•■•■.■■•.••.•■.•..••</li>
+	    <li>..•••■•■•••••■••■••••••■•.•••••••.•.•••••.••••■.••.•■.■•■••■••.•■.•■•.••.•.•••■■.•</li>
+	    <li>••.••■•■•••■••.....■■••••.•■•.•••■••••■.•■•••••■•■■.•■■•■■.■•••.■.••••••■.••.••.•.</li>
+	    <li>••••.•••••.■••••••..■•••.••■.■••■•.•■.•••■•••■■••■.•..■•••.••.•••.•••..•.■••.••■••</li>
+	    <li>.••••••■.••••••..•.••.•■■••.•••.■■..••••■.••■•■•■••..••.••••••...■••••••••••.•••■.</li>
+	    <li>••■■•••••■•••••■■••■..■.■•.•••.•■•.•.■■■■.■■••.•••■■••••••..■■■•••■■.•.•■•■•••.•••</li>
+	    <li>••••••■.■.■.■•.■•■•..•••■•■.••••••.•••••.•.••••■•■.•■■■■..•..•.■.■.••■•...■••■••.•</li>
+    </ul>
 	
 	<header class="sign">
 
 		<section class="post"></section>
 		<section class="front">
 
-			<h1>Merry Christmas!</h1>
+			<h1><small>Your very own</small><big>Christmas card!</big></h1>
 
 			<section class="item">
 				<p>What is your name?</p>
@@ -53,6 +53,18 @@
 
 		</section>
 		<section class="post"></section>
+		
+		<section id="card-selection">
+            <p>Pick your card image:</p>
+            <ul>
+                <li>
+                    <input class="selected" type="button" value="Christmas Tree">
+                </li>
+                <li>
+                    <input type="button" value="Snowman">
+                </li>
+            </ul>            
+        </section>
 
 	</header>
 
@@ -86,6 +98,17 @@
 					<li></li>
 				</ul>
 			</section>
+			
+			<section class="snowman" >
+                <ul>
+                    <li>••</li>
+                    <li></li>
+                    <li></li>
+                    <li>• • •</li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </section>
 
 		</article>
 
@@ -160,7 +183,7 @@
 
 	<article class="snow-hill">        
         
-        <section class="card-back">
+        <section class="card-back" style="display: none;">
             
             <p>Dear <span id="name">...</span></p>
             <p>Merry Christmas!</p>
@@ -168,7 +191,7 @@
             
         </section>
 
-		<section class="card">
+		<section class="card" style="display: none;">
 			<section class="tree">
 				<ul>
 					<li id="starred"></li>
@@ -179,30 +202,12 @@
 					<li></li>
 				</ul>
 			</section>
-		</section>
+		</section>		
 		
-		<section class="card-back">
-            
-            <p>Dear <span id="name">...</span></p>
-            <p>Merry Christmas!</p>
-            <p>from Santa</p>
-            
-        </section>
+    <a href="" id="toTheTop" style="display: none;">To the top ^</a>
 		
-		  <section class="card">
-			<section class="snowman">
-				<ul>
-					<li>••</li>
-					<li></li>
-					<li></li>
-					<li>• • •</li>
-					<li></li>
-					<li></li>
-				</ul>
-			</section>
-		</section>      
-
 	</article>
+    
     
     <footer>
         
