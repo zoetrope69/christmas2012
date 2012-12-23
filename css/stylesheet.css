@@ -748,11 +748,11 @@ body{
 		 -0-transition: all linear 0.4s;
 			transition: all linear 0.4s;
 
-	-webkit-transform-origin: -2.5% 50%; 
-	   -moz-transform-origin: -2.5% 50%; 	
-		-ms-transform-origin: -2.5% 50%;
-		 -o-transform-origin: -2.5% 50%; 
-			transform-origin: -2.5% 50%;
+	-webkit-transform-origin: -2.6% 50%; 
+	   -moz-transform-origin: -2.6% 50%; 	
+		-ms-transform-origin: -2.6% 50%;
+		 -o-transform-origin: -2.6% 50%; 
+			transform-origin: -2.6% 50%;
 }
 
 .alternate{
@@ -761,7 +761,7 @@ body{
 }
 
 .opencard{
-    margin: -500px auto 145px;
+    margin: -501px auto 145px;
     background: #F5F5F5;
     background: -webkit-linear-gradient(left, #F0F0F0 0%,#FFF 100%);    
   	border: 1px solid #DDD;
