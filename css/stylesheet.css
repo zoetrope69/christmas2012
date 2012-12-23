@@ -123,11 +123,6 @@ body{
     -webkit-text-fill-color: transparent;
 }
 
-.sign .front h1 big::-moz-selection, .sign .front h1 big::selection{
-	color: rgb(218, 58, 58);
-	background: #FFFFFF;
-}
-
 .sign .front .item{
 	display: inline-block;
 	width: 45%;
@@ -464,10 +459,6 @@ body{
     color: #7619a7;
 }
 
-.props .snowman ul li:nth-child(4):after{    
-    background-color: #ECECF5;    
-}
-
 .tree, .snowman{ cursor: default; }
 
 .tree ul li, .snowman ul li{
@@ -575,16 +566,6 @@ body{
     word-wrap: break;
 }
 
-.snowman ul li:nth-child(4):after{
-    content: '';
-    display: block;
-    position: relative;
-    background-color: #a8d0d3;
-    width: 90px;
-    top: 95px;
-    left: -40px;
-    height: 20px;
-}
 
 .snowman ul li:nth-child(4):before{
     content: '=~~~~';
