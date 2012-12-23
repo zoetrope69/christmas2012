@@ -196,14 +196,9 @@ body{
 	   -moz-border-radius: 2px;
 			border-radius: 2px;
 
-	-webkit-box-shadow: inset 0 2px 0 rgba(255,255,255,0.25);
-	   -moz-box-shadow: inset 0 2px 0 rgba(255,255,255,0.25);
-			box-shadow: inset 0 2px 0 rgba(255,255,255,0.25);
-    
-    -webkit-transition: opacity linear 2.5s;
-	   -moz-transition: opacity linear 2.5s;
-		 -0-transition: opacity linear 2.5s;
-			transition: opacity linear 2.5s;
+	-webkit-box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.25);
+	   -moz-box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.25);
+			box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.25);    
 }
 
 .sign .front .item ol li:hover{
@@ -648,6 +643,7 @@ body{
 .foliage section.tree{ position: absolute; }
 
 .foliage .tree:nth-child(even){}
+
 .foliage .tree:nth-child(odd){
     -webkit-transform: scale(1.2);
        -moz-transform: scale(1.2);
@@ -692,33 +688,31 @@ body{
 }
 
 .card-back p{
-
     color: #ff3838;
     text-shadow: 0 2px 0 rgba(0, 0, 0, 0.15);
     font-family: Georgia, "Times New Roman", serif;
     font-style: italic;
-
 }
 
-.card-back p:nth-child(1), .card-back p:nth-child(3){
+.card-back #greeting, .card-back #signed{
     height: 10%;
     font-size: 30px;
 }
 
-.card-back p:nth-child(1){
+.card-back #greeting{
     padding: 50px 50px 0;
 }
 
-.card-back p:nth-child(3){
-    padding: 0 50px 50px;
-    text-align: right;
+.card-back #message{
+    height: 29%;
+    padding: 50px;
+    text-align: center;
+    font-size: 85px;
 }
 
-.card-back p:nth-child(2){
-    height: 29%;
-    padding: 80px;
-    text-align: center;
-    font-size: 55px;
+.card-back #signed{
+    padding: 0 50px 50px;
+    text-align: right;
 }
 
 .card{
