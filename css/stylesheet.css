@@ -1,8 +1,44 @@
 *, html, body{ padding:0; margin:0; }
 
 body{
+    overflow: hidden;
     background-color: #ECECF5;    
 	font-family: Helvetica, Arial, serif;
+}
+
+
+.ribbon{
+    position: absolute;
+    width: 100%;
+    padding: 5px 0;
+    background-color: rgba(30, 31, 33, 0.8);
+    
+    -webkit-box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.05), 0 0 0 8px rgba(0, 0, 0, 0.05);
+       -moz-box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.05), 0 0 0 8px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.05), 0 0 0 8px rgba(0, 0, 0, 0.05);
+}
+
+.ribbon section{
+    width: 1024px;
+    margin: 0 auto;
+}
+
+.ribbon p{
+    cursor: default;
+    text-align: right;
+    color: rgba(255, 255, 255, 0.8);
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+    text-transform: uppercase;
+    font-size: 10px;    s
+}
+
+.ribbon a{
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+}
+
+.ribbon a:hover{
+     color: rgba(255, 255, 255, 0.9);
 }
 
 .snowflakes{    
@@ -44,7 +80,7 @@ body{
 	cursor: default;
 	overflow: auto;
 	width: 600px;
-	height: 180px;
+	height: 190px;
 	margin: 20px 0;
 	padding: 10px;
 	text-align: center;
@@ -93,9 +129,10 @@ body{
 	display: inline-block;
 	width: 45%;
 	max-height: 50px;
-	padding: 5px;
+	padding:  15px 5px;
 	border-right: 1px solid rgba(0, 0, 0, 0.1);
 	border-left: 1px solid rgba(0, 0, 0, 0.1);
+	border-bottom: 1px dashed rgba(0, 0, 0, 0.1);
 }
 
 .sign .front .item p{
@@ -187,7 +224,7 @@ body{
 
 .sign .front #go {
 	width: 80%;
-	margin: 20px auto 0;
+	margin: 10px auto 0;
 	padding: 5px;	
 	color: rgba(0, 0, 0, 0.4);
 	text-shadow: 0 2px 0 rgba(255, 255, 255, 0.08);	
@@ -251,7 +288,7 @@ body{
     position: absolute;
     padding: 10px 5px 8px;
     width: 400px;
-    top: 230px;
+    top: 240px;
     left: 150px;
     
     text-align: center;
@@ -259,9 +296,12 @@ body{
     border: 2px solid #4E0A0A;
     border-top: 0;
     
-    -webkit-border-radius: 2px;
-       -moz-border-radius: 2px;
-            border-radius: 2px;
+    -webkit-border-bottom-right-radius: 2px;
+     -webkit-border-bottom-left-radius: 2px;
+        -moz-border-radius-bottomright: 2px;
+         -moz-border-radius-bottomleft: 2px;
+            border-bottom-right-radius: 2px;
+             border-bottom-left-radius: 2px;
             
     -webkit-box-shadow: 0 6px 0 -4px rgba(0, 0, 0, 0.1), inset 0 6px 0 -4px rgba(0, 0, 0, 0.1);
        -moz-box-shadow: 0 6px 0 -4px rgba(0, 0, 0, 0.1), inset 0 6px 0 -4px rgba(0, 0, 0, 0.1);
@@ -316,7 +356,7 @@ body{
 }   
 
 .snow-hill{
-    min-height: 335px;
+    min-height: 313px;
 	padding: 10px 0;
 	background-color: #ECECF5;  
     
@@ -327,6 +367,8 @@ body{
             box-shadow : inset 0 10px 0 -5px rgba(27, 27, 29, 0.05),  inset 0 20px 0 -10px rgba(27, 27, 29, 0.05),
                          inset 0 30px 0 -15px rgba(27, 27, 29, 0.05), inset 0 40px 0 -20px rgba(27, 27, 29, 0.05);
 }
+
+
 
 .presents .present{
 	position: absolute;
@@ -688,8 +730,7 @@ body{
         
     -webkit-box-sizing: border-box; 
        -moz-box-sizing: border-box;
-            box-sizing: border-box;
-            
+            box-sizing: border-box;            
     
     -webkit-transition: all linear 0.4s;
 	   -moz-transition: all linear 0.4s;
@@ -741,50 +782,32 @@ body{
             transform: scale(1.5);	
 }
 
-a#toTheTop{
+#toTheTop{
     position: fixed;
     left: 50px;
-    top: 10px;
-    padding: 10px;
-    height: 50px;
-    width: 50px;
+    top: 50px;
+    padding: 5px;
+    width: 55px;
     text-align: center;
-    color: rgba(0, 0, 0, 0.8);
-    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+    color: rgba(0, 0, 0, 0.5);
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.05);
     font-weight: 900;
-    font-size: 14px;
+    font-size: 20px;
+    text-decoration: none;
     text-transform: uppercase;
     border: 1px solid rrgba(0, 0, 0, 0.5);
-    background-color: rgba(0, 0, 0, 0.25);
+    background-color: rgba(0, 0, 0, 0.1);
     
-    -webkit-border-radius: 5px;
-       -moz-border-radius: 5px;
-            border-radius: 5px;
+    -webkit-border-radius: 2px;
+       -moz-border-radius: 2px;
+            border-radius: 2px;
+            
+    -webkit-box-shadow: 0 6px 0 -2px rgba(0, 0, 0, 0.05);
+       -moz-box-shadow: 0 6px 0 -2px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 6px 0 -2px rgba(0, 0, 0, 0.05);
 }
 
 a#toTheTop:hover{
     cursor: pointer;
-    opacity: 0.4;
-    color: red;
-}
-
-footer{ 
-    width: 100%;
-    padding: 5px 0;
-    background-color: rgb(30, 31, 33);
-    
-    box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.05), 0 0 0 8px rgba(0, 0, 0, 0.05), 0 0 0 12px rgba(0, 0, 0, 0.05);
-}
-
-footer section{
-    width: 960px;
-    margin: 0 auto;
-}
-
-footer p{
-    text-align: right;
-    color: #FFFFFF;
-    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
-    text-transform: uppercase;
-    font-size: 10px;    
+    opacity: 0.9;
 }

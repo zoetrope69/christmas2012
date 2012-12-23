@@ -97,7 +97,7 @@ $(document).ready(function() {
             setTimeout(function() { $('.card').removeClass('opencard') }, 2500); // 'Close' the card   
             $('#toTheTop').fadeOut(100);
             $('html, body').animate({scrollTop: 10}, 1000); // Scroll to the top
-            $('.card, .card-back').fadeOut(1500); 
+            $('.card, .card-back').fadeOut(2000); 
             event.preventDefault(); // Stop button's normal behaviour            
         });
         
