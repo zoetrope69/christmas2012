@@ -5,6 +5,11 @@ $(document).ready(function() {
         fallingSnow(snowArray, snowSpeed);  // Make the snow fall
       //randomiseSnow(snowSpeed);           // Make the snow do random shit    
     
+        var jsonUrl = 'js/cardtext.json';
+        $.getJSON(jsonUrl, function(jsonData) {
+            alert(jsonData.text[0].message);
+        });
+        
         function genSnow() { // Generate the snow
 
             var snowArray = new Array(); // Intialisation and resets
@@ -82,8 +87,7 @@ $(document).ready(function() {
             else if (likeness == -1){ // If they don't select a 'likeness'
                 alert("You didn't select how much Santa likes you!");
             }         
-            else{
-                 // How fast it should scroll
+            else{               
                 $('#name').text(name);
                 $('.card, .card-back, #toTheTop').fadeIn(10);
                 $('.card section').show();
@@ -92,7 +96,7 @@ $(document).ready(function() {
             }
             
             event.preventDefault(); // Stop button's normal behaviour
-        });
+        });        
         
         $('#toTheTop').click(function(){
             
@@ -102,7 +106,8 @@ $(document).ready(function() {
             $('html, body').animate({scrollTop: 10}, 1000); // Scroll to the top
                     
             event.preventDefault(); // Stop button's normal behaviour            
-        });
+        });        
+        
         
         $('#card-selection ul li input').click(function(){
             

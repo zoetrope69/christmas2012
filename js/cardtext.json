@@ -1,0 +1,32 @@
+{"text":[
+        {
+        "name":"",
+        "message":"FUCK YOU",
+        "signed":""
+        },
+        {
+        "name":"",
+        "message":"What do you want?",
+        "signed":"S"
+        },
+        {
+        "name":"To [default],",
+        "string":"",
+        "signed":"From, Santa"
+        },
+        {
+        "name":"[default],",
+        "string":"Merry Christmas!",
+        "signed":"Love from, Santa Claus"
+        },
+        {
+        "name":"Dear [default],",
+        "string":"Merry Christmas and a Happy New Year!",
+        "signed":"Lots of love, Father Christmas"
+        },
+        {
+        "name":"To my dearest [default],",
+        "string":"*insert story here*",
+        "signed":"Yours, Father 'John' Christmas"
+        }
+    ]}
