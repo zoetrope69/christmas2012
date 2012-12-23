@@ -748,11 +748,11 @@ body{
 		 -0-transition: all linear 0.4s;
 			transition: all linear 0.4s;
 
-	-webkit-transform-origin: -2.9% 50%; 
-	   -moz-transform-origin: -2.9% 50%; 	
-		-ms-transform-origin: -2.9% 50%;
-		 -o-transform-origin: -2.9% 50%; 
-			transform-origin: -2.9% 50%;
+	-webkit-transform-origin: -2.5% 50%; 
+	   -moz-transform-origin: -2.5% 50%; 	
+		-ms-transform-origin: -2.5% 50%;
+		 -o-transform-origin: -2.5% 50%; 
+			transform-origin: -2.5% 50%;
 }
 
 .alternate{
