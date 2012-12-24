@@ -769,6 +769,8 @@ body{
 	   -moz-border-radius: 0 2px 2px 0;
 	        border-radius: 0 2px 2px 0;
         
+    border: 1px solid #DDD;    
+
 	-webkit-box-shadow: -3px 3px 10px rgba(27, 27, 29, 0.05);
 	   -moz-box-shadow: -3px 3px 10px rgba(27, 27, 29, 0.05);
 	        box-shadow: -3px 3px 10px rgba(27, 27, 29, 0.05);

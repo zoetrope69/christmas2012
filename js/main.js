@@ -125,6 +125,7 @@ $(document).ready(function() {
         });        
         
         $('#toTheTop').click(function(){
+            
             setTimeout(function() { $('.card').removeClass('opencard opencard-back');  $('.card section').show(); }, 1000);
             $('.card, .card-back').fadeOut(800);  
             $('#toTheTop').fadeOut(800);
