@@ -111,7 +111,7 @@ body{
     font-size: 22px;
 }
 
-.sign .front h1 big{  
+.sign .front h1 span#big{  
     margin-bottom: 15px;	
 	letter-spacing: 8px;
 	color: rgb(218, 58, 58);
@@ -388,11 +388,11 @@ body{
 	left: 55px;
 	background: #E21E1E;
 	
-    -webkit-transform: scale(0.65);
-       -moz-transform: scale(0.65);
-        -ms-transform: scale(0.65);
-         -o-transform: scale(0.65);
-            transform: scale(0.65);
+    -webkit-transform: scale(0.7);
+       -moz-transform: scale(0.7);
+        -ms-transform: scale(0.7);
+         -o-transform: scale(0.7);
+            transform: scale(0.7);
 }
 
 .present:before{
@@ -407,6 +407,12 @@ body{
 	font-size: 51px;
 	color: #333333;
 	text-shadow: 0 2px 0 rgba(0, 0, 0, 0.15);	
+}
+
+@-moz-document url-prefix() {
+    .present:before{
+        font-weight: 700;
+    }
 }
 
 .present ul li{
@@ -695,8 +701,8 @@ body{
 }
 
 .card-back #message{
-    height: 29%;
-    padding: 50px;
+    height: 43%;
+    padding: 20px 40px; 
     text-align: center;
     font-size: 85px;
 }
@@ -710,21 +716,19 @@ body{
     z-index: 1337;
 	width: 500px;
 	height: 500px;
-	margin: -499px auto 120px;
+	margin: -500px auto 120px;
 	padding: 75px 15px;
-background: #a90329;
-background: -moz-linear-gradient(top, #a90329 0%, #8f0222 44%, #6d0019 100%);
-background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#a90329), color-stop(44%,#8f0222), color-stop(100%,#6d0019));
-background: -webkit-linear-gradient(top, #a90329 0%,#8f0222 44%,#6d0019 100%);
-background: -o-linear-gradient(top, #a90329 0%,#8f0222 44%,#6d0019 100%);
-background: -ms-linear-gradient(top, #a90329 0%,#8f0222 44%,#6d0019 100%);
-background: linear-gradient(to bottom, #a90329 0%,#8f0222 44%,#6d0019 100%);
+    background: #a90329;
+    background: -moz-linear-gradient(top, #a90329 0%, #8f0222 44%, #6d0019 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#a90329), color-stop(44%,#8f0222), color-stop(100%,#6d0019));
+    background: -webkit-linear-gradient(top, #a90329 0%,#8f0222 44%,#6d0019 100%);
+    background: -o-linear-gradient(top, #a90329 0%,#8f0222 44%,#6d0019 100%);
+    background: -ms-linear-gradient(top, #a90329 0%,#8f0222 44%,#6d0019 100%);
+    background: linear-gradient(to bottom, #a90329 0%,#8f0222 44%,#6d0019 100%);
 
-	border: 2px solid #E01A1A;
-	
-	-webkit-border-radius: 0 3px 3px 0;
-	   -moz-border-radius: 0 3px 3px 0;
-	        border-radius: 0 3px 3px 0;	
+	-webkit-border-radius: 0 2px 2px 0;
+	   -moz-border-radius: 0 2px 2px 0;
+	        border-radius: 0 2px 2px 0;	
     
     -webkit-transform: skewY(5deg);
        -moz-transform: skewY(5deg);  
@@ -741,11 +745,11 @@ background: linear-gradient(to bottom, #a90329 0%,#8f0222 44%,#6d0019 100%);
 		 -0-transition: all linear 0.4s;
 			transition: all linear 0.4s;
 
-	-webkit-transform-origin: -2.6% 50%; 
-	   -moz-transform-origin: -2.6% 50%; 	
-		-ms-transform-origin: -2.6% 50%;
-		 -o-transform-origin: -2.6% 50%; 
-			transform-origin: -2.6% 50%;
+	-webkit-transform-origin: 0% 50%; 
+	   -moz-transform-origin: 0% 50%; 	
+		-ms-transform-origin: 0% 50%;
+		 -o-transform-origin: 0% 50%; 
+			transform-origin: 0% 50%;
 }
 
 .alternate{
@@ -756,15 +760,14 @@ background: linear-gradient(to bottom, #a90329 0%,#8f0222 44%,#6d0019 100%);
 	background: -o-radial-gradient(center, ellipse cover, #becfd1 0%,#00c3d1 100%); 
 	background: -ms-radial-gradient(center, ellipse cover, #becfd1 0%,#00c3d1 100%); 
 	background: radial-gradient(ellipse at center, #becfd1 0%,#00c3d1 100%); 
-
-	border: 2px solid #89a4ff;
 }
 
 .opencard{
-    margin: -501px auto 145px;
-
-  	border-radius: 0 3px 3px 0;
-    width: 450px;
+    margin: -500px auto 145px;
+        
+    -webkit-border-radius: 0 2px 2px 0;
+	   -moz-border-radius: 0 2px 2px 0;
+	        border-radius: 0 2px 2px 0;
         
 	-webkit-box-shadow: -3px 3px 10px rgba(27, 27, 29, 0.05);
 	   -moz-box-shadow: -3px 3px 10px rgba(27, 27, 29, 0.05);
@@ -784,9 +787,7 @@ background: linear-gradient(to bottom, #a90329 0%,#8f0222 44%,#6d0019 100%);
     background: -webkit-linear-gradient(left, #F0F0F0 0%, #FFF 100%);
     background: -moz-linear-gradient(left, #F0F0F0 0%, #FFF 100%);
     background: -o-linear-gradient(left, #F0F0F0 0%, #FFF 100%);
-    background: linear-gradient(left, #F0F0F0 0%, #FFF 100%);   
-
-  	border: 1px solid #DDD;
+    background: linear-gradient(left, #F0F0F0 0%, #FFF 100%);
 
   	-webkit-transform: rotateY(180deg) skewY(5deg);
 	   -moz-transform: rotateY(180deg) skewY(5deg);
@@ -798,11 +799,11 @@ background: linear-gradient(to bottom, #a90329 0%,#8f0222 44%,#6d0019 100%);
 .card .tree, .card .snowman{	
 	margin-top: 85px;
     
-    -webkit-transform: scale(1.5);	
-       -moz-transform: scale(1.5);	
-        -ms-transform: scale(1.5);	
-         -o-transform: scale(1.5);	
-            transform: scale(1.5);	
+    -webkit-transform: scale(1.6);	
+       -moz-transform: scale(1.6);	
+        -ms-transform: scale(1.6);	
+         -o-transform: scale(1.6);	
+            transform: scale(1.6);	
 }
 
 .card  .tree ul li:nth-child(2):after{
@@ -819,7 +820,7 @@ background: linear-gradient(to bottom, #a90329 0%,#8f0222 44%,#6d0019 100%);
 
 a#toTheTop{
     position: fixed;
-    left: 580px;
+    right: 10px;
     top: 10px;
     padding: 5px 20px;
     text-align: center;

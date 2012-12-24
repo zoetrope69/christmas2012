@@ -91,7 +91,7 @@ $(document).ready(function() {
             { "greeting": "name,", "message": "MC", "signed": "From, Santa" },
             { "greeting": "To name,", "message": "Merry Christmas!", "signed": "Love from, Santa Claus" },
             { "greeting": "Dear name,","message": "Merry Christmas and a Happy New Year!", "signed": "Lot\'s of love, Father Christmas" },
-            { "greeting": "To my dearest name,", "message": "Once upon a time there was an elf called Zac. He/she/it was a good elf and helped Santa immensely. One day Santa asked Zac to go to France and eat every baguette he could find. This was no challenge for the young elf and every bakery was pillaged thoroughly. Santa then got pissed off because the French embassy told him he wasn't welcome anymore so he told Zac to leave and never come back. Moral is don't work for Santa. He is a slave driver.", "signed": "Yours, Father 'John' Christmas" }
+            { "greeting": "To my dearest name,", "message": "Once upon a time there was an elf called name. They were a good elf and helped Santa immensely. One day Santa asked name to go to France and eat every baguette he could find. This was no challenge for the young elf and every bakery was pillaged thoroughly. Santa then got pissed off because the French embassy told him he wasn't welcome anymore so he told name to leave and never come back. Moral is don't work for Santa. He is a slave driver.", "signed": "Yours, Father 'John' Christmas" }
             ];
             
             var greeting = text[likeness].greeting.replace(/name/g, name);
@@ -114,22 +114,21 @@ $(document).ready(function() {
             $('#message').text(message);
             $('#signed').text(signed);                   
           
-            $('.card, .card-back, #toTheTop').fadeIn(10);
+            $('.card, .card-back, #toTheTop').fadeIn(100);
             $('.card section').show();
             $('html, body').animate({scrollTop: 700}, animationSpeed); // Scroll to 750px from the top  
-            setTimeout(function() { $('.card').addClass('opencard'); }, 800);              
-            setTimeout(function() { $('.card').addClass('opencard-back'); $('.card section').hide(); }, 1200); // 'Open' the card   
+            setTimeout(function() { $('.card').addClass('opencard'); }, 1200);              
+            setTimeout(function() { $('.card').addClass('opencard-back'); $('.card section').hide(); }, 1600); // 'Open' the card   
             }
             
             event.preventDefault(); // Stop button's normal behaviour
         });        
         
         $('#toTheTop').click(function(){
-            
-            $('.card').removeClass('opencard opencard-back'); // 'Close' the card
-            $('.card, .card-back').fadeOut(1000);  
-            $('#toTheTop').fadeOut(100);
-            $('html, body').animate({scrollTop: 10}, 1000); // Scroll to the top
+            setTimeout(function() { $('.card').removeClass('opencard opencard-back');  $('.card section').show(); }, 1000);
+            $('.card, .card-back').fadeOut(800);  
+            $('#toTheTop').fadeOut(800);
+            $('html, body').animate({scrollTop: 10}, 800); // Scroll to the top
                     
             event.preventDefault(); // Stop button's normal behaviour            
         });        
