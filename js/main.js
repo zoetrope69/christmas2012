@@ -91,7 +91,7 @@ $(document).ready(function() {
             { "greeting": "name,", "message": "MC", "signed": "From, Santa" },
             { "greeting": "To name,", "message": "Merry Christmas!", "signed": "Love from, Santa Claus" },
             { "greeting": "Dear name,","message": "Merry Christmas and a Happy New Year!", "signed": "Lot\'s of love, Father Christmas" },
-            { "greeting": "To my dearest name,", "message": "Once upon a time there was an elf called name. They were a good elf and helped Santa immensely. One day Santa asked name to go to France and eat every baguette he could find. This was no challenge for the young elf and every bakery was pillaged thoroughly. Santa then got pissed off because the French embassy told him he wasn't welcome anymore so he told name to leave and never come back. Moral is don't work for Santa. He is a slave driver.", "signed": "Yours, Father 'John' Christmas" }
+            { "greeting": "To my dearest name,", "message": "Once upon a time there was an elf called name. They were a good elf and helped Santa immensely. One day Santa asked name to go to France and eat every baguette he could find. This was no challenge for the young elf and every bakery was pillaged thoroughly. Santa then got pissed off because the French embassy told him he wasn't welcome anymore so he told name to leave and never come back. Moral is don't work for Santa.", "signed": "Yours, Father 'John' Christmas" }
             ];
             
             var greeting = text[likeness].greeting.replace(/name/g, name);
